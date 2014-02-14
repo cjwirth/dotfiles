@@ -7,6 +7,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " Vundle required! 
 Bundle 'gmarik/vundle'
+" My own bundles
+Bundle 'jnwhiteh/vim-golang'
 
 syntax on
 filetype plugin indent on " Vundle Required! but also nice
