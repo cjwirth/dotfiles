@@ -1,12 +1,12 @@
 set nocompatible              " be iMproved
 filetype off                  " Vundle required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " Vundle required! 
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 " My own bundles
 Bundle 'jnwhiteh/vim-golang'
 
