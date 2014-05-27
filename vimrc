@@ -16,4 +16,6 @@ filetype plugin indent on " Vundle Required! but also nice
 :set tabstop=4
 :set shiftwidth=4
 :set expandtab
-
+:set number
+:set ruler
+:set laststatus=2
