@@ -2,16 +2,19 @@ set nocompatible              " be iMproved
 filetype off                  " Vundle required!
 
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " Vundle required! 
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 " My own bundles
-Bundle 'jnwhiteh/vim-golang'
+Plugin 'jnwhiteh/vim-golang'
+
+" All plugins must be added befroe this is called
+call vundle#end()
+filetype plugin indent on " Vundle Required! but also nice
 
 syntax on
-filetype plugin indent on " Vundle Required! but also nice
 
 :set tabstop=4
 :set shiftwidth=4
