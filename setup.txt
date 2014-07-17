@@ -1,0 +1,27 @@
+- Install Xcode, which will install git
+- Setup new ssh keys
+- Grab dot files and important things from github
+	- probably need to figure out some things of how to automate the dot files
+	- some links: `ln -s source new_link`
+		ln -s ~/dotfiles/oh-my-zsh/ ~/.oh-my-zsh
+		ln -s ~/dotfiles/vim ~/.vim
+		ln -s ~/dotfiles/vimrc ~/.vimrc
+		ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+	- change to zsh: `chsh -s /bin/zsh`
+
+- install homebrew
+- install pass (so now we can get our passwords haha)
+	- two lines from brew
+	- need to get the ID files in there too
+	http://montemazuma.wordpress.com/2010/03/01/moving-a-gpg-key-privately/
+		0. `export GPG_TTY=`tty`` <-- fixes but when combining keys
+		1. copy public key `gpg --output pubkey.gpg --export {KEYID}`
+		2. combine pub+sec into secure file
+			`gpg2 --output - --export-secret-key {KEYID} |\
+	 		cat pubkey.gpg - |\
+	 		gpg2 --armor --output keys.asc --symmetric --cipher-algo AES256`
+	 	3. copy file over to new pc
+	 	4. import `gpg2 --no-use-agent --output - keys.asc | gpg --import`
+
+
