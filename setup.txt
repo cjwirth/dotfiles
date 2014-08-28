@@ -1,5 +1,26 @@
 - Install Xcode, which will install git
+	- might need to set editor to vim or get errors later (not sure of the cause)
+	$ git config --global core.editor /usr/bin/vim
+- Show hidden files
+	defaults write com.apple.finder AppleShowAllFiles YES
 - Setup new ssh keys
+	ssh-keygen -t rsa -C "your_email@example.com" # create the key
+	eval "$(ssh-agent -s)" # start the ssh agent
+	ssh-add ~/.ssh/id_rsa # add the new key
+
+	optional: multiple ssh keys for different services.
+	Sample: 
+
+	Host ghe.amb.ca.local
+		Hostname ghe.amb.ca.local
+		User git
+		IdentityFile ~/.ssh/id_rsa_CA
+
+	Host github.com
+		HostName github.com
+		User git
+		IdentityFile ~/.ssh/cjwirth
+
 - Grab dot files and important things from github
 	- probably need to figure out some things of how to automate the dot files
 	- some links: `ln -s source new_link`
