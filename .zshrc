@@ -71,4 +71,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# This is useful
+sum() { awk '{ sum += $1 } END { print sum }' }
+
+[[ -e $HOME/.zshrc_local ]] && source $HOME/.zshrc_local
+
 
