@@ -74,6 +74,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # This is useful
 sum() { awk '{ sum += $1 } END { print sum }' }
 
-[[ -e $HOME/.zshrc_local ]] && source $HOME/.zshrc_local
-
-
+ZSHRC_LOCAL=$HOME/.zshrc_local
+if [[ -e $HOME/.zshrc_local ]]; then
+    echo "Loading local config ($ZSHRC_LOCAL)"
+    source $ZSHRC_LOCAL
+fi 
