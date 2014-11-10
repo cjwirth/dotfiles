@@ -76,6 +76,7 @@ sum() { awk '{ sum += $1 } END { print sum }' }
 
 ZSHRC_LOCAL=$HOME/.zshrc_local
 if [[ -e $HOME/.zshrc_local ]]; then
-    echo "Loading local config ($ZSHRC_LOCAL)"
+#    echo "Loading local config ($ZSHRC_LOCAL)"
     source $ZSHRC_LOCAL
 fi 
+
