@@ -24,3 +24,5 @@ syntax on
 :set laststatus=2
 :set encoding=utf-8
 :set fileencodings=utf-8
+
+:set mouse=a
