@@ -29,6 +29,7 @@
 		ln -s ~/dotfiles/vimrc ~/.vimrc
 		ln -s ~/dotfiles/.zshrc ~/.zshrc
 		ln -s ~/dotfiles/ColorThemes/Xcode ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+        ln -s ~/dotfiles/.hushlogin ~/.hushlogin
 
 	- change to zsh: `chsh -s /bin/zsh`
 
