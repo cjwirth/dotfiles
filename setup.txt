@@ -30,6 +30,7 @@
 		ln -s ~/dotfiles/.zshrc ~/.zshrc
 		ln -s ~/dotfiles/ColorThemes/Xcode ~/Library/Developer/Xcode/UserData/FontAndColorThemes
         ln -s ~/dotfiles/.hushlogin ~/.hushlogin
+        ln -s ~/dotfiles/.screenrc ~/.screenrc
 
 	- change to zsh: `chsh -s /bin/zsh`
 

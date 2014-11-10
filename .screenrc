@@ -1,0 +1,6 @@
+escape ^Zz
+
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
