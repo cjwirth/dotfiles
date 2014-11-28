@@ -80,3 +80,7 @@ if [[ -e $HOME/.zshrc_local ]]; then
     source $ZSHRC_LOCAL
 fi 
 
+encrypt() { gpg2 --symmetric --armor --force-mdc --batch -o $PWD/$2 $PWD/$1 }
+decrypt() { gpg2 --decrypt --batch -o $PWD/$2 $PWD/$1 }
+
+alias gittree='git log --oneline --graph --decorate --all'
