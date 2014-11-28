@@ -4,3 +4,8 @@ bind = resize =
 bind + resize +1
 bind - resize -1
 bind _ resize max
+
+# Required to make RVM work nicely
+# TODO: read more about what it does
+# I think it just tells screen what shell to use, and so it loads certain things right?
+shell -${SHELL}
