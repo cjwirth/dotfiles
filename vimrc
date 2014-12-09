@@ -9,6 +9,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " My own bundles
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'kien/ctrlp.vim'
+Plugin 'toyamarinyon/vim-swift'
 
 " All plugins must be added befroe this is called
 call vundle#end()
