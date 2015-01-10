@@ -31,6 +31,7 @@
 		ln -s ~/dotfiles/ColorThemes/Xcode ~/Library/Developer/Xcode/UserData/FontAndColorThemes
         ln -s ~/dotfiles/.hushlogin ~/.hushlogin
         ln -s ~/dotfiles/.screenrc ~/.screenrc
+        ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 	- change to zsh: `chsh -s /bin/zsh`
 
