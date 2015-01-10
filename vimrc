@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'kien/ctrlp.vim'
 Plugin 'toyamarinyon/vim-swift'
+Plugin 'scrooloose/NERDTree'
 
 " All plugins must be added befroe this is called
 call vundle#end()
