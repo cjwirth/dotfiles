@@ -8,7 +8,7 @@ call vundle#begin()
 " Vundle required! 
 Plugin 'gmarik/Vundle.vim'
 " My own bundles
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'scrooloose/NERDTree'
