@@ -29,3 +29,7 @@ syntax on
 :set fileencodings=utf-8
 
 :set mouse=a
+
+" Adding support for tmux clipboard copying
+" Yanking things will add them to the clipboard
+:set clipboard=unnamed
