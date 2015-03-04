@@ -18,6 +18,7 @@ call vundle#end()
 filetype plugin indent on " Vundle Required! but also nice
 
 syntax on
+colorscheme molokai
 
 :set tabstop=4
 :set shiftwidth=4
