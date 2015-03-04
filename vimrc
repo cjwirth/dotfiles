@@ -12,6 +12,7 @@ Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'scrooloose/NERDTree'
+Plugin 'Valloric/YouCompleteMe'
 
 " All plugins must be added befroe this is called
 call vundle#end()
@@ -34,3 +35,4 @@ colorscheme molokai
 " Adding support for tmux clipboard copying
 " Yanking things will add them to the clipboard
 :set clipboard=unnamed
+
