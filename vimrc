@@ -31,6 +31,7 @@ colorscheme molokai
 :set fileencodings=utf-8
 
 :set mouse=a
+:set ttymouse=xterm2
 
 " Adding support for tmux clipboard copying
 " Yanking things will add them to the clipboard
