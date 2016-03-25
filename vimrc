@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 " My own bundles
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
-Plugin 'toyamarinyon/vim-swift'
+Plugin 'keith/swift.vim'
 Plugin 'scrooloose/NERDTree'
 Plugin 'Valloric/YouCompleteMe'
 
