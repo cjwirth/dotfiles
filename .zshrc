@@ -84,3 +84,14 @@ encrypt() { gpg2 --symmetric --armor --force-mdc --batch -o $PWD/$2 $PWD/$1 }
 decrypt() { gpg2 --decrypt --batch -o $PWD/$2 $PWD/$1 }
 
 alias gittree='git log --oneline --graph --decorate --all'
+
+# Show the latest updated date of all the files in the current directory
+_git-ls() {
+    for gitfile in $(git ls-tree --name-only HEAD);
+    do
+        echo "$( git log -1 --format="%ad %ae" --date=iso -- $gitfile ) $gitfile"
+    done
+}
+git-ls() {
+    _git-ls | column -t
+}

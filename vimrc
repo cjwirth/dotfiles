@@ -6,11 +6,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " Vundle required! 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 " My own bundles
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
-Plugin 'toyamarinyon/vim-swift'
+Plugin 'keith/swift.vim'
+" Plugin 'toyamarinyon/vim-swift'
 Plugin 'scrooloose/NERDTree'
 Plugin 'Valloric/YouCompleteMe'
 
