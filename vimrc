@@ -11,7 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'keith/swift.vim'
-" Plugin 'toyamarinyon/vim-swift'
 Plugin 'scrooloose/NERDTree'
 Plugin 'Valloric/YouCompleteMe'
 

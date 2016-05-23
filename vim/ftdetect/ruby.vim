@@ -1,3 +1,3 @@
-" Cocoapods
-au BufNewFile,BufRead Podfile,*.podspec      set filetype=ruby
+" CocoaPods
+au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 
