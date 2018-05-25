@@ -84,6 +84,8 @@ encrypt() { gpg2 --symmetric --armor --force-mdc --batch -o $PWD/$2 $PWD/$1 }
 decrypt() { gpg2 --decrypt --batch -o $PWD/$2 $PWD/$1 }
 
 alias gittree='git log --oneline --graph --decorate --all'
+alias prettyjson="pbpaste | jq -S '.' | pbcopy"
+alias minijson="pbpaste | jq -c '.' | pbcopy"
 
 # Show the latest updated date of all the files in the current directory
 _git-ls() {
@@ -94,4 +96,7 @@ _git-ls() {
 }
 git-ls() {
     _git-ls | column -t
+}
+timestamp() {
+    date +%s
 }

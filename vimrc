@@ -30,6 +30,18 @@ colorscheme molokai
 :set encoding=utf-8
 :set fileencodings=utf-8
 
+" Changes it so the current directory is the directory of the current file.
+" i.e. `:e` can be used relative to the current file.
+" :set autochdir
+
+" Except yaml gets 2 spaces per tabs
+autocmd FileType yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" In Vim 8, delete stopped working right
+" I did't look too hard into why, but here:
+" http://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
+:set backspace=indent,eol,start
+
 :set mouse=a
 :set ttymouse=xterm2
 
