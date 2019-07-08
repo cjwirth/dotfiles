@@ -12,14 +12,23 @@ Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'keith/swift.vim'
 Plugin 'scrooloose/NERDTree'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'altercation/vim-colors-solarized'
 
 " All plugins must be added befroe this is called
 call vundle#end()
 filetype plugin indent on " Vundle Required! but also nice
 
+"*** Color Schemes ***
+" "** Molokai **
 syntax on
 colorscheme molokai
+"** Solarized**
+" syntax enable
+" set background=light "dark 
+" colorscheme solarized
 
 :set tabstop=4
 :set shiftwidth=4
@@ -49,3 +58,6 @@ autocmd FileType yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandt
 " Yanking things will add them to the clipboard
 :set clipboard=unnamed
 
+" Remap C-e to nothing so to-end-of-line works
+:imap <C-e> <Nop>
+:nnoremap <C-t> :NERDTreeToggle<CR>
