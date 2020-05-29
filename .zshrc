@@ -100,3 +100,8 @@ git-ls() {
 timestamp() {
     date +%s
 }
+## Copy the oh-my-zsh custom directory into the submodule
+update-oh-my-zsh-custom() {
+    rm -rf ~/.oh-my-zsh/custom
+    cp -r ~/dotfiles/oh-my-zsh.custom ~/.oh-my-zsh/custom
+}
