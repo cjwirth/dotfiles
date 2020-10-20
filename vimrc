@@ -28,14 +28,17 @@ filetype plugin indent on " Vundle Required! but also nice
 " In general makes it look better, or more 'native' I guess?
 :set termguicolors
 syntax on
-"** Corvine Light**
-colorscheme corvine_light
-"** Molokai **
-" colorscheme molokai
-"** Solarized**
-" syntax enable
-" set background=light "dark 
-" colorscheme solarized
+
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "Dark"
+    set background=dark
+    colorscheme molokai
+" colorscheme corvine
+else
+    set background=light
+    colorscheme solarized
+" colorscheme corvine_light
+endif
 
 :set tabstop=4
 :set shiftwidth=4
