@@ -110,4 +110,4 @@ update-oh-my-zsh-custom() {
 ## Aliases
 alias xcode="open -a '/Applications/Xcode.app'"
 alias be="bundle exec"
-alias ia='open $1 -a /Applications/iA\ Writer.app'
+alias bef="bundle exec fastlane"
