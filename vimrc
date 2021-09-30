@@ -29,6 +29,9 @@ filetype plugin indent on " Vundle Required! but also nice
 :set termguicolors
 syntax on
 
+" This can screw up the colors when in tmux
+" The toggleable color scheme doesn't work in tmux, so it might think it's in
+" light mode, when it's actually in dark, screwing things up.
 let iterm_profile = $ITERM_PROFILE
 if iterm_profile == "Dark"
     set background=dark
@@ -43,11 +46,15 @@ endif
 :set tabstop=4
 :set shiftwidth=4
 :set expandtab
-:set number
-:set ruler
-:set laststatus=2
+:set number " display line number
+:set ruler " display cursor/scroll information
+:set laststatus=2 " display toolbar above input bar
 :set encoding=utf-8
 :set fileencodings=utf-8
+
+:set hlsearch " highlight all search results
+:set ignorecase " do case insensitive search
+:set incsearch " show incremental search results as you type
 
 " Make whitespace characters visible
 " :set list - to enable
@@ -73,9 +80,15 @@ autocmd FileType yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandt
 " Yanking things will add them to the clipboard
 :set clipboard=unnamed
 
+:nnoremap <C-t> :NERDTreeToggle<CR>
+
 " Remap C-e to nothing so to-end-of-line works
 :imap <C-e> <Nop>
-:nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Map jk, kj and jj to <Esc> so I don't have to press the escape button. Maybe
+" :imap jj <Esc>
+" :imap jk <Esc>
+" :imap kj <Esc>
 
 " Use ag for ctrlp as file finder instead of grep
 " https://stackoverflow.com/a/17327372
@@ -87,3 +100,10 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" Reload changes to the file if they happen elsewhere.
+" set autoread: Picks up changes to files, but it needs a command to trigger
+" au CursorHold * checktime: Runs checktime if the cursor hasn't moved
+" call feedkeys("lh"): Moves the cursor a bit so we can re-trigger CursorHold
+" to loop
+" See: https://stackoverflow.com/a/48296697/1403046
+" :set autoread | au CursorHold * checktime | call feedkeys("lh")
