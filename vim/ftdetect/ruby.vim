@@ -1,3 +1,3 @@
 " CocoaPods
-au BufNewFile,BufRead Podfile,*.podspec,Fastfile,Gemfile set filetype=ruby
+au BufNewFile,BufRead Podfile,*.podspec,Fastfile,*.fastfile,Gemfile set filetype=ruby
 
