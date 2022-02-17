@@ -46,7 +46,7 @@ ZSH_THEME="proze"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
+plugins=(git macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,3 +111,6 @@ update-oh-my-zsh-custom() {
 alias xcode="open -a '/Applications/Xcode.app'"
 alias be="bundle exec"
 alias bef="bundle exec fastlane"
+
+# Duolingo CLI - https://github.com/duolingo/cli
+. "${HOME}/.duolingo/init.sh"
