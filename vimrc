@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'arzg/vim-corvine'
+Plugin 'ayu-theme/ayu-vim'
 
 " All plugins must be added befroe this is called
 call vundle#end()
@@ -34,14 +35,17 @@ syntax on
 " light mode, when it's actually in dark, screwing things up.
 let iterm_profile = $ITERM_PROFILE
 if iterm_profile == "Dark"
-    set background=dark
-    colorscheme molokai
+"    set background=dark
+"    colorscheme molokai
 " colorscheme corvine
+"    let ayucolor="dark"
 else
-    set background=light
-    colorscheme solarized
+"    set background=light
+"    colorscheme solarized
 " colorscheme corvine_light
+"    let ayucolor="light"
 endif
+"colorscheme ayu
 
 :set tabstop=4
 :set shiftwidth=4
