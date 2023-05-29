@@ -5,6 +5,12 @@ autoload -U colors && colors
 PROMPT="%{$fg[magenta]%}%n%{$reset_color%} %{$fg_bold[green]%}%~%{$reset_color%} $ "
 RPROMPT='[%D{%Y-%m-%d %H:%M:%S}]'
 
+# Makes autocomplete work in a case-insensitive way
+# I don't really know how it works
+# https://superuser.com/questions/1680124/macos-tab-completion-to-be-case-insensetive-terminal-zsh
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{A-Z}={a-z}'
+
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
