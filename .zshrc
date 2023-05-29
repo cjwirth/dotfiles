@@ -102,6 +102,9 @@ alias gst='git status'
 alias gl='git pull'
 alias ggp='git push'
 alias glog='git log --oneline'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+
 
 # Go back and forth in shell history with prefix
 bindkey "^[[A" history-beginning-search-backward
