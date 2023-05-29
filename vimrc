@@ -27,7 +27,8 @@ filetype plugin indent on " Vundle Required! but also nice
 "*** Color Schemes ***
 " Uses terminal GUI colors (i think?)
 " In general makes it look better, or more 'native' I guess?
-:set termguicolors
+" It looks better in iTerm2, but terrible in Terminal.app
+" :set termguicolors
 syntax on
 
 " This can screw up the colors when in tmux
