@@ -12,7 +12,6 @@ Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'keith/swift.vim'
 Plugin 'scrooloose/NERDTree'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 
 " Color schemes
@@ -30,23 +29,6 @@ filetype plugin indent on " Vundle Required! but also nice
 " It looks better in iTerm2, but terrible in Terminal.app
 " :set termguicolors
 syntax on
-
-" This can screw up the colors when in tmux
-" The toggleable color scheme doesn't work in tmux, so it might think it's in
-" light mode, when it's actually in dark, screwing things up.
-let iterm_profile = $ITERM_PROFILE
-if iterm_profile == "Dark"
-"    set background=dark
-"    colorscheme molokai
-" colorscheme corvine
-"    let ayucolor="dark"
-else
-"    set background=light
-"    colorscheme solarized
-" colorscheme corvine_light
-"    let ayucolor="light"
-endif
-"colorscheme ayu
 
 :set tabstop=4
 :set shiftwidth=4
