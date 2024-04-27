@@ -1,9 +1,17 @@
 export LANG=en_US.UTF-8
 
+# History
+setopt APPEND_HISTORY
+setopt EXTENDED_HISTORY
+
 # Prompt
 autoload -U colors && colors
-PROMPT="%{$fg[magenta]%}%n%{$reset_color%} %{$fg_bold[green]%}%~%{$reset_color%} $ "
-RPROMPT='[%D{%Y-%m-%d %H:%M:%S}]'
+# The ~ expands the directory path (from home)
+# PROMPT="%{$fg[magenta]%}%n%{$reset_color%} %{$fg_bold[green]%}%~%{$reset_color%} $ "
+# The c makes it just the current directory
+PROMPT="%{$fg_bold[green]%}%c%{$reset_color%} $ "
+# RPROMPT='[%D{%Y-%m-%d %H:%M:%S}]'
+RPROMPT='[%D{%H:%M:%S}]'
 
 # Makes autocomplete work in a case-insensitive way
 # I don't really know how it works
@@ -40,7 +48,8 @@ alias gco='git checkout'
 alias gst='git status'
 alias gl='git pull'
 alias ggp='git push'
-alias glog='git log --oneline'
+# alias glog='git log --oneline'
+alias glog="git log --date=format:'%e %b, %Y (%a)' --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cd%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --graph"
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
