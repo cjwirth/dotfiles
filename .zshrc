@@ -9,12 +9,27 @@ setopt SHARE_HISTORY
 # Don't save lines that begin with spaces
 setopt HIST_IGNORE_SPACE
 
+###############################################################################
 # Prompt
+###############################################################################
 autoload -U colors && colors
-# The ~ expands the directory path (from home)
-# PROMPT="%{$fg[magenta]%}%n%{$reset_color%} %{$fg_bold[green]%}%~%{$reset_color%} $ "
-# The c makes it just the current directory
-PROMPT="%{$fg_bold[green]%}%c%{$reset_color%} $ "
+# enable getting git info
+autoload -Uz vcs_info
+
+# always load before displaying the prompt
+precmd () { vcs_info }
+setopt prompt_subst
+
+zstyle ':vcs_info:*' enable git  # Enable git info
+zstyle ':vcs_info:*' check-for-changes true  # Detect changes
+zstyle ':vcs_info:*' stagedstr '^'
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' formats '@%F{magenta}%b%f%c%u'
+zstyle ':vcs_info:*' actionformats '@%F{magenta}%b%f%c%u (%a)'
+
+# The c makes it just the current directory, ~ would be expanded from home.
+PROMPT='%{$fg_bold[green]%}%c%{$reset_color%}${vcs_info_msg_0_} $ '
+
 # RPROMPT='[%D{%Y-%m-%d %H:%M:%S}]'
 RPROMPT='[%D{%H:%M:%S}]'
 
