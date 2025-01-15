@@ -68,10 +68,14 @@ alias gco='git checkout'
 alias gst='git status'
 alias gl='git pull'
 alias ggp='git push'
+alias grb='git rebase'
+alias grbo='git rebase --onto'
 # alias glog='git log --oneline'
 alias glog="git log --date=format:'%e %b, %Y (%a)' --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cd%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --graph"
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+
+alias gunignore='git ls-files -v | grep '^S' | cut -c3- | xargs git update-index --no-skip-worktree'
 
 
 # Go back and forth in shell history with prefix
