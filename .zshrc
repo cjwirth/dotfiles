@@ -1,8 +1,13 @@
 export LANG=en_US.UTF-8
 
 # History
-setopt APPEND_HISTORY
-setopt EXTENDED_HISTORY
+HISTFILE=~/.zsh_history
+setopt SHARE_HISTORY
+# setopt APPEND_HISTORY
+# setopt EXTENDED_HISTORY
+
+# Don't save lines that begin with spaces
+setopt HIST_IGNORE_SPACE
 
 # Prompt
 autoload -U colors && colors
