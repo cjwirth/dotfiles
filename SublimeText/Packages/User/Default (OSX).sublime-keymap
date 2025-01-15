@@ -1,0 +1,17 @@
+[
+    {
+        "keys": ["command+shift+j"],
+        "command": "reveal_in_side_bar"
+    },
+
+    {
+        "keys": ["super+shift+w"],
+        "command": "toggle_setting",
+        "args": {
+            "setting": "word_wrap"
+        }
+    },
+
+    // Terminus
+    { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
+]

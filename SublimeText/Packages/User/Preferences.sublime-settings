@@ -1,0 +1,29 @@
+{
+	"font_face": "Monaspace Neon Var",
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"rulers": [
+		120
+	],
+	"trim_trailing_white_space_on_save": true,
+	"color_scheme": "auto",
+	"draw_white_space": ["all"],
+
+	"word_wrap": false,
+	"index_files": true,
+
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"dark_color_scheme": "ayu-mirage.sublime-color-scheme",
+	"light_color_scheme": "Xcode Default.sublime-color-scheme",
+
+	// supposedly makes reading provisioning profiles possible
+	"enable_hexadecimal_encoding": false,
+
+	// "hot_exit": "disabled",
+	// "hot_exit_projects": false,
+	"theme": "auto",
+}

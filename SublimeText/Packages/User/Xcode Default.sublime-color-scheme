@@ -1,0 +1,14 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+    // The ${} inside quotes to keep them visible (ironically, lol)
+    "embedded": "var(invisibles)",
+  },
+  "globals":
+  {
+  },
+  "rules":
+  [
+  ]
+}
