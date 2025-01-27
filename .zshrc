@@ -1,6 +1,6 @@
-export LANG=en_US.UTF-8
-
+###############################################################################
 # History
+###############################################################################
 HISTFILE=~/.zsh_history
 setopt SHARE_HISTORY
 # setopt APPEND_HISTORY
@@ -39,17 +39,10 @@ RPROMPT='[%D{%H:%M:%S}]'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' matcher-list 'm:{A-Z}={a-z}'
 
-# Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
 
-# Local Tools
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-ZSHRC_LOCAL=$HOME/.zshrc_local
-if [[ -e $HOME/.zshrc_local ]]; then
-    source $ZSHRC_LOCAL
-fi 
+###############################################################################
+# Aliases
+###############################################################################
 
 ## Aliases
 alias be="bundle exec"
@@ -77,6 +70,9 @@ alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 alias gunignore='git ls-files -v | grep '^S' | cut -c3- | xargs git update-index --no-skip-worktree'
 
+###############################################################################
+# idk misc and stuff
+###############################################################################
 
 # Go back and forth in shell history with prefix
 bindkey "^[[A" history-beginning-search-backward
@@ -84,3 +80,8 @@ bindkey "^[[B" history-beginning-search-forward
 
 # Duolingo CLI - https://github.com/duolingo/cli
 . "${HOME}/.duolingo/init.sh"
+
+ZSHRC_LOCAL=$HOME/.zshrc_local
+if [[ -e $HOME/.zshrc_local ]]; then
+    source $ZSHRC_LOCAL
+fi
