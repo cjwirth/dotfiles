@@ -1,8 +1,3 @@
-export LANG=en_US.UTF-8
-
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Ruby
 if which rbenv > /dev/null; then
   eval "$(rbenv init - --no-rehash zsh)"
@@ -18,8 +13,8 @@ fi
 
 # Node
 if which nodenv > /dev/null; then
-  export PATH="$HOME/$(npm get prefix)/bin:$PATH"
   eval "$(nodenv init -)";
+  export PATH="$HOME/$(npm get prefix)/bin:$PATH"
 fi
 
 
