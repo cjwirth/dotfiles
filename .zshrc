@@ -70,6 +70,9 @@ alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 alias gunignore='git ls-files -v | grep '^S' | cut -c3- | xargs git update-index --no-skip-worktree'
 
+# Global ignore file for rsync
+alias rsync="rsync --exclude-from=$HOME/.rsync-exclude"
+
 ###############################################################################
 # idk misc and stuff
 ###############################################################################
